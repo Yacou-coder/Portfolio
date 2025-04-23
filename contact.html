@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Mon Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="contact.html" class="active">Contact</a></li>
+                <li><a href="gallery.html">Galerie</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="contact">
+            <h1>Contactez-moi</h1>
+            <div class="contact-form">
+                <input type="text" id="name" placeholder="Votre nom" required>
+                <input type="email" id="email" placeholder="Votre email" required>
+                <textarea id="message" placeholder="Votre message" required></textarea>
+                <button onclick="submitForm()">Envoyer</button>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>© 2025 YACOUBA SANOGO. Tous droits réservés.</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

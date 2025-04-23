@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galerie - Mon Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="gallery.html" class="active">Galerie</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="gallery">
+            <h1>Ma Galerie</h1>
+            <div class="gallery-grid">
+                <img src="image/Bien.jpg" alt="Image 1" onclick="openModal(this.src)">
+                <img src="image/Cool.jpg" alt="Image 2" onclick="openModal(this.src)">
+                <img src="image/Ok.jpg" alt="Image 3" onclick="openModal(this.src)">
+                <img src="image/OUI.jpg" alt="Image 4" onclick="openModal(this.src)">
+                <img src="image/Si.jpg" alt="Image 5" onclick="openModal(this.src)">
+                <img src="image/Yac.jpg" alt="Image 6" onclick="openModal(this.src)">
+                <img src="image/Yacouba.jpg" alt="Image 7" onclick="openModal(this.src)">
+            </div>
+            <div id="modal" class="modal">
+                <span class="close" onclick="closeModal()">×</span>
+                <img id="modal-image" class="modal-content">
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>© 2025 YACOUBA SANOGO. Tous droits réservés.</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
