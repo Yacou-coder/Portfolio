@@ -3,33 +3,49 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <link rel="manifest" href="manifest.json">
+    <meta name="description" content="Contactez Yacouba Sanogo via ce formulaire.">
     <title>Contact - Mon Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
-        <nav>
-            <ul>
-                <li><a href="index.html">Accueil</a></li>
-                <li><a href="contact.html" class="active">Contact</a></li>
-                <li><a href="gallery.html">Galerie</a></li>
-            </ul>
-        </nav>
+        <!-- Bouton hamburger ajouté -->
+        <button class="menu-toggle" aria-label="Ouvrir le menu">
+            <i class="fas fa-bars"></i>
+        </button>
+        <div id="menu-container"></div>
     </header>
     <main>
         <section class="contact">
             <h1>Contactez-moi</h1>
             <div class="contact-form">
-                <input type="text" id="name" placeholder="Votre nom" required>
-                <input type="email" id="email" placeholder="Votre email" required>
-                <textarea id="message" placeholder="Votre message" required></textarea>
-                <button onclick="submitForm()">Envoyer</button>
+                <form action="https://formspree.io/f/xpwdzyeb" method="POST" id="contact-form">
+                    <input type="hidden" name="_subject" value="Nouveau message de YACOUBA SANOGO !">
+                    <input type="text" name="name" id="name" placeholder="Votre nom" required><br><br>
+                    <input type="email" name="_replyto" id="email" placeholder="Votre email" required><br><br>
+                    <textarea name="message" id="message" placeholder="Votre message" required></textarea>
+                    <input type="text" name="_gotcha" style="display:none">
+                    <button type="submit">Envoyer</button>
+                </form>
+                <div id="status" class="status-message"></div>
             </div>
         </section>
     </main>
     <footer>
-        <p>© 2025 YACOUBA SANOGO. Tous droits réservés.</p>
+        <p>© 2025 YACOUBA SANOGO Tous droits réservés.</p>
     </footer>
     <script src="script.js"></script>
+    <script>
+        // Inclusion du menu
+        fetch('menu.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('menu-container').innerHTML = data;
+            });
+    </script>
 </body>
 </html>
