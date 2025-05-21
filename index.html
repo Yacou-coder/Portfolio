@@ -1,30 +1,115 @@
-
 <!DOCTYPE html>
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Portfolio personnel de Yacouba Sanogo, présentant ses projets et réalisations.">
-    <title>Mon Portfolio</title>
+    <meta name="description" content="Portfolio de Yacouba Sanogo, étudiant en Informatique de Gestion">
+    <meta name="keywords" content="portfolio, informatique, gestion, Yacouba Sanogo">
+    <meta name="author" content="Yacouba Sanogo">
+    <title>Portfolio de Yacouba Sanogo</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 </head>
 <body>
     <header>
+        <button class="menu-toggle" aria-label="Ouvrir le menu">
+            <i class="fas fa-bars"></i>
+        </button>
         <nav>
             <ul>
-                <li><a href="index.html" class="active" aria-label="Accueil">Accueil</a></li>
-                <li><a href="contact.html" aria-label="Contact">Contact</a></li>
-                <li><a href="gallery.html" aria-label="Galerie">Galerie</a></li>
+                <li><a href="index.html" class="active">Accueil</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="gallery.html">Galerie</a></li>
+                <li><a href="social.html">Réseaux Sociaux</a></li>
             </ul>
         </nav>
     </header>
+
     <main>
         <section class="hero">
-            <h1>Bienvenue sur mon site</h1>
-            <p>Je suis YACOUBA SANOGO, et voici mon portfolio personnel.</p><br><br>
-            <button onclick="showWelcomeMessage()">En savoir plus</button>
+            <h1>Bienvenue sur mon site web</h1>
+            <p>Je suis étudiant en Informatique de Gestion passionné par la technologie et son impact sur le monde des affaires.</p>
+            <p>Je suis YACOUBA SANOGO, et voici mon portfolio professionnel.</p>
+            <img src="image/Yacouba-sanogo.jpg" alt="Mon image" class="profile-image">
+            <button class="cta-button">En savoir plus</button>
+        </section>
+
+        <section class="about">
+            <h2><i class="fas fa-user" aria-hidden="true"></i> À propos de moi</h2>
+            <div class="about-content">
+                <div>
+                    <h3>Mon parcours académique</h3>
+                    <p>Étudiant en Informatique de Gestion (IG) à l'Institut Universitaire de Gestion (IUG), j'ai acquis une solide compréhension des systèmes d'information et de leur rôle dans l'optimisation des processus métier.</p>
+                </div>
+                <div>
+                    <h3>Mes compétences clés</h3>
+                    <ul style="list-style: none; padding-left: 0;">
+                        <li><i class="fas fa-code" aria-hidden="true"></i> Développement d'applications Java</li>
+                        <li><i class="fas fa-database" aria-hidden="true"></i> Gestion de bases de données relationnelles</li>
+                        <li><i class="fas fa-laptop-code" aria-hidden="true"></i> Création de solutions web responsives</li>
+                    </ul>
+                </div>
+                <div>
+                    <h3>Mes projets récents</h3>
+                    <ul style="list-style: none; padding-left: 0;">
+                        <li><i class="fas fa-globe" aria-hidden="true"></i> Portfolio web en HTML/CSS/JavaScript</li>
+                        <li><i class="fas fa-boxes" aria-hidden="true"></i> Système de gestion de stock avec MySQL</li>
+                        <li><i class="fas fa-chart-bar" aria-hidden="true"></i> Outil d'analyse de données avec Excel</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="skills">
+            <h2><i class="fas fa-tools" aria-hidden="true"></i> Mes compétences</h2>
+            <div class="skill-category">
+                <h3>Maintenance Informatique</h3>
+                <ul style="list-style: none; padding-left: 0;">
+                    <li><i class="fas fa-screwdriver-wrench" aria-hidden="true"></i> Diagnostic et réparation de pannes matérielles/logicielles</li>
+                    <li><i class="fas fa-sync-alt" aria-hidden="true"></i> Optimisation des systèmes d'exploitation</li>
+                    <li><i class="fas fa-headset" aria-hidden="true"></i> Assistance technique utilisateur</li>
+                </ul>
+            </div>
+            <div class="skill-category">
+                <h3>Développement Web</h3>
+                <ul style="list-style: none; padding-left: 0;">
+                    <li><i class="fab fa-html5" aria-hidden="true"></i> HTML5/CSS3 modernes</li>
+                    <li><i class="fab fa-js" aria-hidden="true"></i> JavaScript (ES6+)</li>
+                    <li><i class="fas fa-plug" aria-hidden="true"></i> Intégration de APIs REST</li>
+                </ul>
+            </div>
+            <div class="skill-category">
+                <h3>Outils maîtrisés</h3>
+                <div class="tools-grid">
+                    <div>
+                        <h4>Développement</h4>
+                        <ul style="list-style: none; padding-left: 0;">
+                            <li><i class="fas fa-code" aria-hidden="true"></i> Visual Studio Code</li>
+                            <li><i class="fab fa-git-alt" aria-hidden="true"></i> Git & GitHub</li>
+                            <li><i class="fas fa-database" aria-hidden="true"></i> MySQL Workbench</li>
+                            <li><i class="fas fa-database" aria-hidden="true"></i> Microsoft Access</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4>Collaboration</h4>
+                        <ul style="list-style: none; padding-left: 0;">
+                            <li><i class="fab fa-microsoft" aria-hidden="true"></i> Microsoft Teams</li>
+                            <li><i class="fab fa-google-drive" aria-hidden="true"></i> Google Drive</li>
+                            <li><i class="fas fa-tasks" aria-hidden="true"></i> Trello</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
         </section>
     </main>
+
+    <footer>
+        <p>YACOUBA SANOGO. Tous droits réservés.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
     <footer>
         <p>© 2025 YACOUBA SANOGO. Tous droits réservés.</p>
     </footer>
