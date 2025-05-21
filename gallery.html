@@ -4,30 +4,67 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Galerie - Mon Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
-        <nav>
-            <ul>
-                <li><a href="index.html">Accueil</a></li>
-                <li><a href="contact.html">Contact</a></li>
-                <li><a href="gallery.html" class="active">Galerie</a></li>
-            </ul>
-        </nav>
+        <!-- Bouton hamburger ajouté -->
+        <button class="menu-toggle" aria-label="Ouvrir le menu">
+            <i class="fas fa-bars"></i>
+        </button>
+        <div id="menu-container"></div>
     </header>
     <main>
         <section class="gallery">
             <h1>Ma Galerie</h1>
-            <div class="gallery-grid">
-                <img src="image/Bien.jpg" alt="Image 1" onclick="openModal(this.src)">
-                <img src="image/Cool.jpg" alt="Image 2" onclick="openModal(this.src)">
-                <img src="image/Ok.jpg" alt="Image 3" onclick="openModal(this.src)">
-                <img src="image/OUI.jpg" alt="Image 4" onclick="openModal(this.src)">
-                <img src="image/Si.jpg" alt="Image 5" onclick="openModal(this.src)">
-                <img src="image/Yac.jpg" alt="Image 6" onclick="openModal(this.src)">
-                <img src="image/Yacouba.jpg" alt="Image 7" onclick="openModal(this.src)">
+
+            <!-- Catégorie : À propos de moi -->
+            <div class="category">
+                <h2 class="category-title">À propos de moi</h2>
+                <div class="gallery-grid">
+                    <div class="gallery-item">
+                        <img src="image/Ok.jpg" alt="Photo personnelle 1" class="gallery-image"width="400" height="600" onclick="openModal(this.src)">
+                        <p class="description">Une photo de moi lors d’un événement personnel.</p>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="image/OUI.jpg" alt="Photo personnelle 2" class="gallery-image" width="400" height="600" onclick="openModal(this.src)">
+                        <p class="description">Un moment de réflexion lors de mes études.</p>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="image/Si.jpg" alt="Photo personnelle 3" class="gallery-image"width="400" height="600" onclick="openModal(this.src)">
+                        <p class="description">Un souvenir marquant de ma vie étudiante.</p>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="image/Yac.jpg" alt="Photo personnelle 4" class="gallery-image"width="400" height="600" onclick="openModal(this.src)">
+                        <p class="description">Moi, étudiant à l’IUG, en train de travailler sur un projet.</p>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="image/Yacouba.jpg" alt="Photo personnelle 5" class="gallery-image" width="400" height="600" onclick="openModal(this.src)">
+                        <p class="description">Un moment de détente après une journée productive.</p>
+                    </div>
+                </div>
             </div>
+
+            <!-- Catégorie : Mes activités -->
+            <div class="category">
+                <h2 class="category-title">Mes activités</h2>
+                <div class="gallery-grid">
+                    <div class="gallery-item">
+                        <img src="images/study_session.jpg" alt="Études à l’IUG" class="gallery-image" width="400" height="600" onclick="openModal(this.src)">
+                        <p class="description">Une session d’étude à l’IUG pour un projet en Informatique de Gestion.</p>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="images/computer_repair.jpg" alt="Réparation d’ordinateur" class="gallery-image" width="400" height="600" onclick="openModal(this.src)">
+                        <p class="description">Réparation d’un ordinateur lors d’un stage pratique.</p>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="images/coding_project.jpg" alt="Projet de codage" class="gallery-image"width="400" height="600" onclick="openModal(this.src)">
+                        <p class="description">Travail sur un projet de codage pour un cours à l’IUG.</p>
+                    </div>
+                </div>
+            </div>
+
             <div id="modal" class="modal">
                 <span class="close" onclick="closeModal()">×</span>
                 <img id="modal-image" class="modal-content">
@@ -38,5 +75,13 @@
         <p>© 2025 YACOUBA SANOGO. Tous droits réservés.</p>
     </footer>
     <script src="script.js"></script>
+    <script>
+        // Inclusion du menu
+        fetch('menu.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('menu-container').innerHTML = data;
+            });
+    </script>
 </body>
 </html>
